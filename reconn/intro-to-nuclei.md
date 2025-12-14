@@ -21,6 +21,7 @@ Unlike traditional scanners that try to guess everything, Nuclei uses specific "
 Since I use Go often, I install it this way:
 ```bash
 go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+```
 
 Don't forget to update templates regularly: nuclei -update-templates
 
@@ -91,6 +92,7 @@ requests:
           ```
 
 If Nuclei sees root:x:0:0 in the response body, it alerts me.
+```
 
 ### 💡 Pro-Tips for Using Nuclei
 
