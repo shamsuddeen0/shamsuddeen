@@ -85,7 +85,7 @@ You don't always need tools. Sometimes you just need the right search query.
 ---
 
 ## 🏋️ Practice Resources
-Where I practice my OSINT skills legally:
+Where you can practice your OSINT skills legally:
 1.  **[Trace Labs](https://www.tracelabs.org/):** Using OSINT to help find real missing persons.
 2.  **[OhSINT (TryHackMe)](https://tryhackme.com/room/ohsint):** A beginner CTF room for analyzing a photo.
 3.  **[GeoGuessr](https://www.geoguessr.com/):** A game that trains your brain to recognize locations based on scenery.
