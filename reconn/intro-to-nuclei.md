@@ -25,67 +25,54 @@ go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 Don't forget to update templates regularly: nuclei -update-templates
 
 🛠️ My Go-To Commands
-1. The "Sanity Check" (Basic Scan)
+
+# 1. The "Sanity Check" (Basic Scan)
 
 When I first approach a target and want to see if there are any obvious low-hanging fruit.
-
-code
-Bash
-download
-content_copy
-expand_less
+```bash
 nuclei -u https://target.com
-2. Hunting for Specific CVEs
+```
+
+To scan multiple targets from a file:
+
+```bash
+nuclei -l targets.txt
+```
+### 2. Hunting for Specific CVEs
 
 If I see a specific technology (like Apache Struts) and only want to check for high-severity CVEs.
 
-code
-Bash
-download
-content_copy
-expand_less
+```bash
 nuclei -u https://target.com -t cves/ -severity critical,high
-3. The "Bug Bounty" Scan (Exposure & Tokens)
+```
+### 3. The "Bug Bounty" Scan (Exposure & Tokens)
 
 When looking for API keys, env files, or exposed panels.
 
-code
-Bash
-download
-content_copy
-expand_less
+```bash 
 nuclei -u https://target.com -tags exposure,token,config
-4. Scanning a List of Targets
+```
+### 4. Scanning a List of Targets
 
 I rarely scan one host. Usually, I pipe my subdomain list (from httpx or assetfinder) directly into Nuclei.
 
-code
-Bash
-download
-content_copy
-expand_less
+```bash 
 cat live_subdomains.txt | nuclei -t cves/ -o results.txt
-5. Being "Gentle" (Rate Limiting)
+```
+### 5. Being "Gentle" (Rate Limiting)
 
 If I am testing a sensitive production server or a fragile CTF box, I slow it down.
 
-code
-Bash
-download
-content_copy
-expand_less
+```bash 
 nuclei -u https://target.com -rate-limit 50 -concurrency 10
-📝 Understanding Templates
+```
+## 📝 Understanding Templates
 
 Nuclei works by using YAML files called Templates.
 
 Here is how I read a template to understand what it's doing. This example checks for a "Vulnerable Endpoint":
 
-code
-Yaml
-download
-content_copy
-expand_less
+```yaml
 id: example-vuln
 info:
   name: Example Vulnerability
@@ -101,9 +88,11 @@ requests:
         words:
           - "root:x:0:0"  # What it looks for in the response
 
+          ```
+
 If Nuclei sees root:x:0:0 in the response body, it alerts me.
 
-💡 Pro-Tips for Using Nuclei
+### 💡 Pro-Tips for Using Nuclei
 
 Don't run blindly: Running all templates takes a long time and is very noisy. Filter by tags!
 
@@ -112,17 +101,13 @@ Update often: Security moves fast. Run nuclei -ut before every engagement.
 Chain it: I almost always use Nuclei in a chain:
 subfinder -d target.com | httpx | nuclei -t cves/
 
-📚 Resources
+### 📚 Resources
 
 Official ProjectDiscovery GitHub
 
 Nuclei Templates List
 
-code
-Code
-download
-content_copy
-expand_less
+
 ### Why this works for you:
 1.  **The "Sanity Check":** It uses language that implies you are *doing* the work ("When I first approach a target...").
 2.  **Simplified YAML:** Instead of a complex Log4J example, I wrote a pseudo-code example that explains the *logic* (Look at URL -> Find this Word -> Alert) so beginners can understand it instantly.
