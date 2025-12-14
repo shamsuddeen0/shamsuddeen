@@ -2,12 +2,22 @@
 
 **"If you can't find it, you can't hack it."**
 
-This section documents the tools and techniques I use to map out a target. I have broken this down into **Passive** (gathering info without touching the target) and **Active** (sending packets to the target).
+Reconnaissance is the most critical phase of the kill chain. If I don't know a server or a webpage exists, I can't test it. This page documents the tools and techniques I use to map out a target.
+
+## 🧠 In a Nutshell: Active vs. Passive
+Before using the tools, it is important to understand the difference. I like to use the "House Security" analogy:
+
+| Feature | ☁️ Passive Recon | ⚡ Active Recon |
+| :--- | :--- | :--- |
+| **The Analogy** | **"The Stalker"** <br> You sit in a car across the street watching the house. You check the owner's social media to see if they are on vacation. | **"The Knocker"** <br> You walk up to the house and jiggle the handle to see if it's locked. You knock on the door to see who answers. |
+| **Definition** | Gathering information from public sources *without* directly interacting with the target's servers. | Interacting directly with the target system by sending packets and requests. |
+| **Stealth** | **100% Stealthy.** The target has no idea you are watching because you never touch their network. | **Noisy.** Your IP address will appear in their firewall logs and intrusion detection systems. |
+| **Tools** | Google, Whois, Shodan, LinkedIn. | Nmap, Burp Suite, Nikto, Nuclei. |
 
 ---
 
-## ☁️ Passive Recon (OSINT)
-*The goal here is to learn as much as possible without alerting the target.*
+## ☁️ Passive Recon Tools (OSINT)
+*Gathering information without alerting the target.*
 
 ### 🔍 Search Engines & Dorks
 *   **[Google Hacking Database (GHDB)](https://www.exploit-db.com/google-hacking-database)**: A collection of search queries to find exposed files, login portals, and errors.
@@ -26,13 +36,9 @@ This section documents the tools and techniques I use to map out a target. I hav
 *   **[theHarvester](https://github.com/laramies/theHarvester)**: Gathers emails, names, subdomains, IPs, and URLs from public sources.
 *   **[LinkedIn](https://www.linkedin.com)**: Essential for understanding the "Tech Stack" a company uses based on their job postings.
 
-### 📋 Infrastructure & Whois
-*   **[Whois.domaintools.com](https://whois.domaintools.com/)**: Good for historical ownership data.
-*   **[BGP Looking Glasses](https://bgp.he.net/)**: Hurricane Electric's tool to find IP ranges (ASN) owned by an organization.
-
 ---
 
-## ⚡ Active Recon
+## ⚡ Active Recon Tools
 *⚠️ **Warning:** These tools generate traffic and logs. Only use these on targets you have permission to test.*
 
 ### 🗺️ Network Scanning
@@ -44,7 +50,6 @@ This section documents the tools and techniques I use to map out a target. I hav
 ### 🕸️ Web Enumeration
 *   **[Burp Suite](https://portswigger.net/burp)**: The #1 tool for web hacking. I use the Community Edition for manual testing.
 *   **[FFUF](https://github.com/ffuf/ffuf)**: "Fuzz Faster U Fool" - My go-to tool for brute-forcing directories and files.
-*   **[Nikto](https://github.com/sullo/nikto)**: Scans for outdated server software and misconfigurations.
 *   **[Wappalyzer](https://www.wappalyzer.com/)**: A browser extension that tells me what technologies a website is built with (CMS, Frameworks, etc).
 
 ### ☢️ Vulnerability Scanning
