@@ -14,10 +14,10 @@ This page documents my workflow for enumerating Ports **139 (NetBIOS)** and **44
 ---
 
 ## 1️⃣ Discovery & Version Detection
-Before attacking, I need to know what I am dealing with. Is it Windows 7? Windows 10? A Samba server on Linux?
+Before attacking, you need to know what you are dealing with. Is it Windows 7? Windows 10? A Samba server on Linux?
 
 ### Using Nmap
-I don't just scan the port; I want the OS version and the computer name.
+you don't just scan the port; you want the OS version and the computer name.
 ```bash
 # -sV: Version detection
 # --script smb-os-discovery: The best script to get the exact Windows version
@@ -34,7 +34,7 @@ msfconsole -q -x "use auxiliary/scanner/smb/smb_version; set RHOSTS 192.168.10.1
 
 ### 2️⃣ The "Null Session" Check (No Credentials)
 
-This is the first thing I check. A "Null Session" means the server allows me to log in with no username and no password.
+This is the first thing i check. A "Null Session" means the server allows me to log in with no username and no password.
 
 Checking Access with SMBMap
 
@@ -52,7 +52,7 @@ Result WRITE: I can upload malicious files (Exploit opportunity!).
 
 Checking Access with SMBClient
 
-If I prefer a manual interaction (like an FTP client):
+If you prefer a manual interaction (like an FTP client):
 
 ```bash
 # -L lists shares
@@ -61,7 +61,7 @@ smbclient -L //192.168.10.10 -N
 ```
 ### 3️⃣ Enumerating Users (RID Cycling)
 
-If I can't access files, I might still be able to query the server for a list of valid users. This helps me build a username list for password spraying later.
+If you can't access files, you might still be able to query the server for a list of valid users. This helps you build a username list for password spraying later.
 
 Using Lookupsid (Metasploit)
 
@@ -82,18 +82,18 @@ lookupsid.py anonymous@192.168.10.10
 ```
 ### 4️⃣ "The Heavy Lifter": Enum4Linux
 
-When I want to run everything at once, I use enum4linux. It is a wrapper that runs smbclient, rpcclient, net, and nmblookup all together.
+if you want to run everything at once, you can use enum4linux. It is a wrapper that runs smbclient, rpcclient, net, and nmblookup all together.
 
 ```bash
 # -a: Do EVERYTHING (Users, Shares, Groups, OS Info)
 enum4linux -a 192.168.10.10
 ```
 
-Note: This tool is noisy and produces a lot of output. I usually pipe it to a file: enum4linux -a target > enum.txt
+Note: This tool is noisy and produces a lot of output. you can pipe it to a file: enum4linux -a target > enum.txt
 
 ### 5️⃣ Interacting with Shares (The Loot)
 
-Once I find a share I can access (e.g., a share named Finance or Backups), I connect to it to hunt for passwords.
+Once you find a share you can access (e.g., a share named Finance or Backups), you connect to it to hunt for passwords.
 
 Connecting via SMBClient
 ```bash
@@ -114,7 +114,7 @@ mget *: Download everything.
 
 Mounting the Share (Linux)
 
-Sometimes it's easier to mount the share to my Kali machine so I can use grep or open files in a text editor.
+Sometimes it's easier to mount the share to your Kali machine so you can use grep or open files in a text editor.
 
 ```bash
 mkdir /mnt/target_share
@@ -152,7 +152,7 @@ Common Hit: smb-vuln-ms17-010 (EternalBlue). If you see this, it's usually an in
 
 ### 📚 Mounting Shares on Windows (Post-Exploitation)
 
-If I have compromised a Windows machine and want to connect to another share on the network:
+If you have compromised a Windows machine and want to connect to another share on the network:
 
 ```bash
 net use Z: \\192.168.10.10\Backups /USER:domain\user password
