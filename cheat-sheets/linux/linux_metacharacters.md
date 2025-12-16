@@ -1,10 +1,10 @@
-```bash
 
-# 🐧 Linux Metacharacters Cheat Sheet
+#### 🐧 Linux Metacharacters Cheat Sheet
 
 **"The glue that holds Linux commands together."**
 
 Understanding these symbols is what separates a beginner from a power user. It is also the foundation of **Command Injection** attacks.
+
 
 ---
 
@@ -35,7 +35,6 @@ Understanding these symbols is what separates a beginner from a power user. It i
 | `<<<` | **Here-String** | Feed a string directly into stdin. | `base64 <<< "secret"` |
 
 ---
-
 ## 💉 Command Injection (The "Hacker" Context)
 *Why do we care about these symbols in Cybersecurity?*
 
