@@ -19,13 +19,13 @@ Netcat reads and writes data across network connections using TCP or UDP. It is 
 
 ## 📋 Table of Contents
 - [Basic Syntax](#basic-syntax)
-- [Connection Modes](#Connection-Modes)
-- [Port Scanning & Banner Grabbing](#port-scanning)
+- [Connection Modes](#connection-modes)
+- [Port Scanning & Banner Grabbing](#port-scanning--banners)
 - [File Transfers](#file-transfers)
-- [Shells (Reverse & Bind)](#shells)
-- [Port Forwarding & Proxying](#port-forwarding)
-- [Advanced Tricks](#advanced-techniques)
-- [Ncat (The Modern Upgrade)](#ncat-modern-netcat)
+- [Shells (Reverse & Bind)](#shells-reverse--bind)
+- [Port Forwarding](#port-forwarding)
+- [Advanced Techniques](#advanced-techniques)
+- [Ncat (Modern Netcat)](#ncat-modern-netcat)
 
 ---
 
