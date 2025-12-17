@@ -5,16 +5,16 @@ A comprehensive collection of cybersecurity cheat sheets covering networking, ex
 
 ## 📚 Table of Contents
 
-### 🌐 [Networking](./networking/)
-- [Nmap - Network Scanning](./networking/nmap.md)
+### 🌐 [Networking](./Networking/)
+- [Nmap - Network Scanning](./Networking/Nmap.md)
 - [Netcat - Swiss Army Knife](./networking/netcat.md)
-- [Tcpdump - Packet Capture](./networking/tcpdump.md)
-- [Tshark - Terminal Wireshark](./networking/tshark.md)
-- [Wireshark - Display Filters](./networking/wireshark-filters.md)
-- [Hping3 - Packet Crafting](./networking/hping3.md)
-- [Scapy - Packet Manipulation](./networking/scapy.md)
-- [IP Command](./networking/ip-command.md)
-- [Insecure Protocols](./networking/insecure-protocols.md)
+- [Tcpdump - Packet Capture](./Networking/tcpdump.md)
+- [Tshark - Terminal Wireshark](./Networking/tshark.md)
+- [Wireshark - Display Filters](./Networking/wireshark-filters.md)
+- [Hping3 - Packet Crafting](./Networking/hping3.md)
+- [Scapy - Packet Manipulation](./Networking/scapy.md)
+- [IP Command](./Networking/ip-command.md)
+- [Insecure Protocols](./Networking/insecure-protocols.md)
 
 ### 🔍 [Digital Forensics](./forensics/)
 - [Volatility - Memory Forensics](./forensics/volatility.md)
