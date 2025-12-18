@@ -7,18 +7,18 @@ Bash (Bourne Again Shell) is a powerful scripting language used extensively in L
 ---
 
 ## 📋 Table of Contents
-- [Basic Syntax](#basic-syntax)
-- [Variables](#variables)
-- [Input/Output](#inputoutput)
-- [Conditionals](#conditionals)
-- [Loops](#loops)
-- [Functions](#functions)
-- [File Operations](#file-operations)
-- [String Manipulation](#string-manipulation)
-- [Arrays](#arrays)
-- [🛡️ Security Scripts (My Collection)](#-security-scripts-my-collection)
-- [Best Practices](#best-practices)
-- [Resources](#resources)
+- [Basic Syntax](#-basic-syntax)
+- [Variables](#-variables)
+- [Input/Output](#-inputoutput)
+- [Conditionals](#-conditionals)
+- [Loops](#-loops)
+- [Functions](#-functions)
+- [File Operations](#-file-operations)
+- [String Manipulation](#-string-manipulation)
+- [Arrays](#-arrays)
+- [Security Scripts](#-security-scripts-my-collection)
+- [Best Practices](#-best-practices)
+- [Resources](#-resources)
 
 ---
 
@@ -466,13 +466,12 @@ Absolute Paths: Use /bin/ls instead of ls in critical scripts to avoid path hija
 
 ### 📚 Resources
 
-Bash Manual (GNU)
 
-ShellCheck (Linter)
+- [Bash Manual](https://www.gnu.org/software/bash/manual/)
+- [ShellCheck](https://www.shellcheck.net/)
+- [Bash Guide for Beginners](https://tldp.org/LDP/Bash-Beginners-Guide/html/)
+- [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/)
 
-Bash Guide for Beginners (TLDP)
-
-Advanced Bash-Scripting Guide
 
 ### ⚠️ Legal Notice
 
