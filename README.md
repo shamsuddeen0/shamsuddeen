@@ -18,7 +18,7 @@ Here is how I have organized my learning path. Each folder contains notes, cheat
 Before hacking, we must understand how things work.
 - **[Networking-Basics](networking/)**: TCP/IP, OSI Model, Subnetting, and Protocols.
 - **[Linux-Essentials](cheat-sheets/linux)**: Command line mastery, permissions, and scripting.
-- **[Programming](programming/)**: Python for security and Bash scripting.
+- **[Programming](cheat-sheets/scripting)**: Python for security and Bash scripting.
 
 ### ⚔️ 2. Offensive Security (Red Team)
 Everything related to ethical hacking and penetration testing.
