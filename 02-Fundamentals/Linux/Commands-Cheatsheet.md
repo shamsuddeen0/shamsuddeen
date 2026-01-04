@@ -107,8 +107,7 @@ cat file.txt | awk '{print $4}'
 | `curl -I <URL>` | Headers |
 | `wget <URL>` | Download |
 ### 📦 System Info (Recon)
-```bash 
-```
+```bash
 `uname -a`: Kernel version (Critical for finding kernel exploits).
 
 `whoami`: Current user.
@@ -121,10 +120,8 @@ cat file.txt | awk '{print $4}'
 
 `history`: Show previous commands typed by the user (Often contains passwords!).
 ```
-```
 ### 🗜️ Archiving & Compression
-```bash
-```
+```bash 
 ### Exfiltrating data.
 
 Zip: `zip -r data.zip folder/`
@@ -134,6 +131,7 @@ Unzip: `unzip data.zip`
 Tar (Compress): `tar -czvf backup.tar.gz folder/`
 
 Tar (Extract): `tar -xzvf backup.tar.gz`
+```
 
 ```
 uname -a    # Kernel version (Critical for finding kernel exploits).
