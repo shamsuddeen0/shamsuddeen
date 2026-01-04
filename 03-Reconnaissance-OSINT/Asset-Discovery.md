@@ -14,6 +14,7 @@ Modern companies have thousands of subdomains (`dev.target.com`, `admin.target.c
 My go-to tool for a quick list. It queries passive sources (VirusTotal, Censys).
 ```bash
 subfinder -d target.com -o subdomains.txt
+```
 2. Amass (Comprehensive)
 
 The heavy hitter. It does brute forcing, scraping, and recursive searching. It takes longer but finds more.
