@@ -1,20 +1,3 @@
-# Zip
-zip -r data.zip folder/
-
-# Unzip
-unzip data.zip
-
-# Tar (Compress)
-tar -czvf backup.tar.gz folder/
-
-# Tar (Extract)
-tar -xzvf backup.tar.gz
-uname -a    # Kernel version (Critical for finding kernel exploits).
-whoami      # Current user.
-id          # Current group privileges.
-ps aux      # List all running processes (Is there an antivirus running?).
-env         # Show environment variables (Look for secrets/keys).
-history     # Show previous commands typed by the user (Often contains passwords!).
 
 Here is the Commands-Cheatsheet.md. This isn't just ls and cd. This is a collection of the commands you actually use during a CTF or Pentest to find files, manipulate text, and move data.
 
@@ -145,7 +128,7 @@ cat file.txt | awk '{print $4}'
 ### 🗜️ Archiving & Compression
 ```bash
 ```
-Exfiltrating data.
+### Exfiltrating data.
 
 Zip: `zip -r data.zip folder/`
 
@@ -155,4 +138,11 @@ Tar (Compress): `tar -czvf backup.tar.gz folder/`
 
 Tar (Extract): `tar -xzvf backup.tar.gz`
 
+```
+uname -a    # Kernel version (Critical for finding kernel exploits).
+whoami      # Current user.
+id          # Current group privileges.
+ps aux      # List all running processes (Is there an antivirus running?).
+env         # Show environment variables (Look for secrets/keys).
+history     # Show previous commands typed by the user (Often contains passwords!).
 ```
