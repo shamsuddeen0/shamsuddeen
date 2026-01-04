@@ -13,9 +13,8 @@ When you run `ls -l`, you see something like this:
 -rwxr-xr--  1  root  staff  4096  Jan 1  12:00  script.sh
 ```
 
-``` 
-```
-## `Breaking it down`:
+``` `
+# `Breaking it down`:
 
 1. Type (`-`):
 
@@ -98,6 +97,7 @@ What it means: Only the owner (or root) can delete files in this folder.
 Example: `/tmp` directory. Anyone can write there, but I can't delete your files.
 
 ### 🛠️ Practical Commands
+
 Fixing "Permission Denied" on a Script
 ```bash 
 chmod +x script.sh
