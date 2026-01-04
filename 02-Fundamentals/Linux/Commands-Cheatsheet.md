@@ -108,29 +108,29 @@ cat file.txt | awk '{print $4}'
 | `wget <URL>` | Download |
 ### 📦 System Info (Recon)
 ```bash
-`uname -a`: Kernel version (Critical for finding kernel exploits).
+uname -a: Kernel version (Critical for finding kernel exploits).
 
-`whoami`: Current user.
+whoami: Current user.
 
-`id`: Current group privileges.
+id: Current group privileges.
 
-`ps aux`: List all running processes (Is there an antivirus running?).
+ps aux: List all running processes (Is there an antivirus running?).
 
-`env`: Show environment variables (Look for secrets/keys).
+env: Show environment variables (Look for secrets/keys).
 
-`history`: Show previous commands typed by the user (Often contains passwords!).
+history: Show previous commands typed by the user (Often contains passwords!).
 ```
 ### 🗜️ Archiving & Compression
 ```bash 
 ### Exfiltrating data.
 
-Zip: `zip -r data.zip folder/`
+Zip: zip -r data.zip folder/
 
-Unzip: `unzip data.zip`
+Unzip: unzip data.zip
 
-Tar (Compress): `tar -czvf backup.tar.gz folder/`
+Tar (Compress): tar -czvf backup.tar.gz folder/
 
-Tar (Extract): `tar -xzvf backup.tar.gz`
+Tar (Extract): tar -xzvf backup.tar.gz
 ```
 
 ```
