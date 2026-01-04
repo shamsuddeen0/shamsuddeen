@@ -59,7 +59,7 @@ locate exploit.py
 ```
 Essential for cleaning up wordlists or Nmap output.
 ```
-### `cat` / ### `less` / ### `head` / ### `tail`
+`cat`/`less`/`head`/`tail`
 
 Reading files.
 
@@ -107,7 +107,7 @@ Command	Usage
 `wget <URL>`	Download
 ``
 ### 📦 System Info (Recon)
-```
+```bash 
 ```
 `uname -a`: Kernel version (Critical for finding kernel exploits).
 
@@ -123,7 +123,7 @@ Command	Usage
 ```
 ```
 ### 🗜️ Archiving & Compression
-```
+```bash
 ```
 Exfiltrating data.
 
