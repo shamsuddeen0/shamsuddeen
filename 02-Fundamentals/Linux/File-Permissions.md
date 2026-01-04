@@ -16,19 +16,19 @@ When you run `ls -l`, you see something like this:
 
 1. Type (`-`):
 
-~ `-` = Regular File
+`-` = Regular File
 
-~ `d` = Directory
+ `d` = Directory
 
 2. Permissions (`rwxr-xr--`):
 
 Broken into 3 sets of 3: `Owner` | `Group` | `World (Everyone)`
 
-~ `rwx` (Owner can Read, Write, Execute)
+ `rwx` (Owner can Read, Write, Execute)
 
-~ `r-x` (Group can Read, Execute)
+ `r-x` (Group can Read, Execute)
 
-~ `r--` (World can Read only)
+ `r--` (World can Read only)
 
 3. Owner (`root`): The user who owns the file.
 
