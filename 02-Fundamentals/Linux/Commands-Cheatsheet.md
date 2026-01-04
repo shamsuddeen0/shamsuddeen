@@ -35,6 +35,7 @@ find / -user root -type f
 
 # Find files with SUID bit set (PrivEsc)
 find / -perm -4000 2>/dev/null
+```
 grep
 
 Searching inside files.
