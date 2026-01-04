@@ -36,7 +36,7 @@ find / -user root -type f
 # Find files with SUID bit set (PrivEsc)
 find / -perm -4000 2>/dev/null
 ```
-grep
+### `grep`
 
 Searching inside files.
 
@@ -47,7 +47,7 @@ grep -r "password" .
 # Search for a string but ignore case (-i)
 grep -i "admin" users.txt
 ```
-locate
+### `locate`
 
 Faster than find, but uses a database.
 
@@ -58,8 +58,8 @@ locate exploit.py
 ### 📝 Text Manipulation (The "Awk/Sed" Magic)
 ```
 Essential for cleaning up wordlists or Nmap output.
-
-cat / less / head / tail
+```
+### `cat` / ### `less` / ### `head` / ### `tail`
 
 Reading files.
 
@@ -71,7 +71,7 @@ head -n 5 file.txt: Show first 5 lines.
 
 tail -f /var/log/syslog: Watch a log file update in real-time.
 
-sort & uniq
+### `sort & uniq`
 
 Organizing lists.
 ```
@@ -80,7 +80,7 @@ Organizing lists.
 # Sort a list alphabetically and remove duplicates
 sort subs.txt | uniq > clean_subs.txt
 ```
-cut
+### `cut`
 
 Extracting specific columns.
 
@@ -88,7 +88,7 @@ Extracting specific columns.
 # Extract userames (column 1) from /etc/passwd
 cat /etc/passwd | cut -d ":" -f 1
 ```
-awk
+### `awk`
 
 The advanced text processor.
 
@@ -99,36 +99,40 @@ cat file.txt | awk '{print $4}'
 ### 🌐 Networking from Terminal
 ``
 Command	Usage
-ip a	Show IP
-ping -c 4 <IP>	Connectivity
-netstat -antp	Connections
-ss -lntp	Sockets
-curl -I <URL>	Headers
-wget <URL>	Download
+### `ip a`	Show IP
+### `ping -c 4 <IP>`	Connectivity
+### `netstat -antp`	Connections
+### `ss -lntp`	Sockets
+### `curl -I <URL>`	Headers
+### `wget <URL>`	Download
 ``
 ### 📦 System Info (Recon)
 ```
-uname -a: Kernel version (Critical for finding kernel exploits).
+```
+`uname -a`: Kernel version (Critical for finding kernel exploits).
 
-whoami: Current user.
+`whoami`: Current user.
 
-id: Current group privileges.
+`id`: Current group privileges.
 
-ps aux: List all running processes (Is there an antivirus running?).
+`ps aux`: List all running processes (Is there an antivirus running?).
 
-env: Show environment variables (Look for secrets/keys).
+`env`: Show environment variables (Look for secrets/keys).
 
-history: Show previous commands typed by the user (Often contains passwords!).
+`history`: Show previous commands typed by the user (Often contains passwords!).
+```
 ```
 ### 🗜️ Archiving & Compression
 ```
+```
 Exfiltrating data.
 
-Zip: zip -r data.zip folder/
+Zip: `zip -r data.zip folder/`
 
-Unzip: unzip data.zip
+Unzip: `unzip data.zip`
 
-Tar (Compress): tar -czvf backup.tar.gz folder/
+Tar (Compress): `tar -czvf backup.tar.gz folder/`
 
-Tar (Extract): tar -xzvf backup.tar.gz
+Tar (Extract): `tar -xzvf backup.tar.gz`
+
 ```
