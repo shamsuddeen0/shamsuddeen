@@ -9,30 +9,32 @@ One of the most common ways to hack a Linux machine (Privilege Escalation) is by
 
 ## 📜 Reading Permissions (`ls -l`)
 When you run `ls -l`, you see something like this:
-
-```text
 -rwxr-xr--  1  root  staff  4096  Jan 1  12:00  script.sh
-Breaking it down:
 
-Type (-):
+```
+```
+`Breaking it down`:
 
-- = Regular File
+Type (`-`):
 
-d = Directory
+`-` = Regular File
 
-Permissions (rwxr-xr--):
+`d` = Directory
 
-Broken into 3 sets of 3: Owner | Group | World (Everyone)
+Permissions (`rwxr-xr--`):
 
-rwx (Owner can Read, Write, Execute)
+Broken into 3 sets of 3: `Owner` | `Group` | `World (Everyone)`
 
-r-x (Group can Read, Execute)
+`rwx` (Owner can Read, Write, Execute)
 
-r-- (World can Read only)
+`r-x` (Group can Read, Execute)
 
-Owner (root): The user who owns the file.
+`r--` (World can Read only)
 
-Group (staff): The group that owns the file.
+Owner (`root`): The user who owns the file.
+
+Group (`staff`): The group that owns the file.
+```
 ```
 
 ### 🧮 The "Chmod" Math (Octal Notation)
@@ -40,19 +42,19 @@ Group (staff): The group that owns the file.
 Permissions are often represented by numbers.
 
 Value	Letter	Meaning
-4	r	Read (View contents)
-2	w	Write (Modify/Delete)
-1	x	Execute (Run as a program)
-0	-	No Permission
+4	`r`	Read (View contents)
+2	`w`	Write (Modify/Delete)
+1	`x`	Execute (Run as a program)
+0	`-`	No Permission
 Common Examples:
 
-chmod 777: (4+2+1) Everyone can do everything. (Dangerous!)
+`chmod 777`: (4+2+1) Everyone can do everything. (Dangerous!)
 
-chmod 755: Owner (7), Group (5), World (5). Standard for scripts.
+`chmod 755`: Owner (7), Group (5), World (5). Standard for scripts.
 
-chmod 600: Owner (6), Group (0), World (0). Standard for SSH keys (Read/Write for owner ONLY).
+`chmod 600`: Owner (6), Group (0), World (0). Standard for SSH keys (Read/Write for owner ONLY).
 
-chmod +x: Adds "Execute" permission for everyone.
+`chmod +x`: Adds "Execute" permission for everyone.
 
 ### 👮 Changing Ownership (chown)
 
@@ -62,11 +64,11 @@ Only the root user can give away ownership of a file.
 sudo chown kali:kali exploit.py
 ```
 
-chown root file: Change owner to root.
+`chown root file`: Change owner to root.
 
-chown :admin file: Change group to admin.
+`chown :admin file`: Change group to admin.
 
-chown -R: Recursive. Changes ownership for a folder and everything inside it.
+`chown -R: Recursive`. Changes ownership for a folder and everything inside it.
 
 ### ☣️ Special Permissions (The Dangerous Ones)
 
@@ -74,25 +76,25 @@ These are critical for Privilege Escalation.
 
 1. SUID (Set User ID)
 
-Symbol: s in the owner section (e.g., -rwsr-xr-x).
+Symbol: `s` in the owner section (e.g., `-rwsr-xr-x`).
 
 What it means: When you run this file, it runs with the permissions of the Owner (usually root), not the user who ran it.
 
-Risk: If nmap has SUID, I can run nmap as root and escape to a shell!
+Risk: If `nmap` has SUID, I can run `nmap` as root and escape to a shell!
 
 2. SGID (Set Group ID)
 
-Symbol: s in the group section.
+Symbol: `s` in the group section.
 
 What it means: Files created in this directory inherit the group ownership of the directory. Useful for shared folders.
 
 3. Sticky Bit
 
-Symbol: t at the end (e.g., drwxrwxrwt).
+Symbol: `t` at the end (e.g., `drwxrwxrwt`).
 
 What it means: Only the owner (or root) can delete files in this folder.
 
-Example: /tmp directory. Anyone can write there, but I can't delete your files.
+Example: `/tmp` directory. Anyone can write there, but I can't delete your files.
 
 ### 🛠️ Practical Commands
 Fixing "Permission Denied" on a Script
