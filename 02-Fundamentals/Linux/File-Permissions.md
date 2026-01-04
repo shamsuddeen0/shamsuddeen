@@ -35,7 +35,7 @@ Broken into 3 sets of 3: `Owner` | `Group` | `World (Everyone)`
 4. Group (`staff`): The group that owns the file.
 ```  
 
-####  🧮 The "Chmod" Math (Octal Notation)
+## 🧮 The "Chmod" Math (Octal Notation)
 Permissions are often represented by numbers.
 
 Value	Letter	Meaning
@@ -53,7 +53,7 @@ Common Examples:
 
 `chmod +x`: Adds "Execute" permission for everyone.
 
-### 👮 Changing Ownership (chown)
+## 👮 Changing Ownership (chown)
 ``
 Only the root user can give away ownership of a file.
 ```bash
@@ -67,7 +67,7 @@ sudo chown kali:kali exploit.py
 
 `chown -R: Recursive`. Changes ownership for a folder and everything inside it.
 ``` `
-### ☣️ Special Permissions (The Dangerous Ones)
+## ☣️ Special Permissions (The Dangerous Ones)
 
 These are critical for Privilege Escalation.
 
@@ -93,7 +93,7 @@ What it means: Only the owner (or root) can delete files in this folder.
 
 Example: `/tmp` directory. Anyone can write there, but I can't delete your files.
 ``` `
-### 🛠️ Practical Commands
+## 🛠️ Practical Commands
 
 Fixing "Permission Denied" on a Script
 ```bash 
