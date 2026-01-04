@@ -37,8 +37,8 @@ Broken into 3 sets of 3: `Owner` | `Group` | `World (Everyone)`
 4. Group (`staff`): The group that owns the file.
 ```  `
 
-### 🧮 The "Chmod" Math (Octal Notation)
-
+####  🧮 The "Chmod" Math (Octal Notation)
+``
 Permissions are often represented by numbers.
 
 Value	Letter	Meaning
@@ -55,9 +55,9 @@ Common Examples:
 `chmod 600`: Owner (6), Group (0), World (0). Standard for SSH keys (Read/Write for owner ONLY).
 
 `chmod +x`: Adds "Execute" permission for everyone.
-
+``` `
 ### 👮 Changing Ownership (chown)
-
+``
 Only the root user can give away ownership of a file.
 ```bash
 # Syntax: chown user:group file
@@ -69,9 +69,9 @@ sudo chown kali:kali exploit.py
 `chown :admin file`: Change group to admin.
 
 `chown -R: Recursive`. Changes ownership for a folder and everything inside it.
-
+``` `
 ### ☣️ Special Permissions (The Dangerous Ones)
-
+``` 
 These are critical for Privilege Escalation.
 
 1. SUID (Set User ID)
@@ -95,7 +95,7 @@ Symbol: `t` at the end (e.g., `drwxrwxrwt`).
 What it means: Only the owner (or root) can delete files in this folder.
 
 Example: `/tmp` directory. Anyone can write there, but I can't delete your files.
-
+``` 
 ### 🛠️ Practical Commands
 
 Fixing "Permission Denied" on a Script
