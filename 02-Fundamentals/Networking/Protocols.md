@@ -2,7 +2,7 @@
 
 **"The language of the internet."**
 
-As a hacker, I need to know these protocols better than the sysadmin who configured them. If I understand how they work, I understand how to break them.
+As a hacker, you need to know these protocols better than the sysadmin who configured them. If you understand how they work, you understand how to break them.
 
 ---
 
