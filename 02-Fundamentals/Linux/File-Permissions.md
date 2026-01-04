@@ -71,7 +71,7 @@ sudo chown kali:kali exploit.py
 `chown -R: Recursive`. Changes ownership for a folder and everything inside it.
 ``` `
 ### ☣️ Special Permissions (The Dangerous Ones)
-``` 
+``` `
 These are critical for Privilege Escalation.
 
 1. SUID (Set User ID)
@@ -95,7 +95,7 @@ Symbol: `t` at the end (e.g., `drwxrwxrwt`).
 What it means: Only the owner (or root) can delete files in this folder.
 
 Example: `/tmp` directory. Anyone can write there, but I can't delete your files.
-``` 
+``` `
 ### 🛠️ Practical Commands
 
 Fixing "Permission Denied" on a Script
