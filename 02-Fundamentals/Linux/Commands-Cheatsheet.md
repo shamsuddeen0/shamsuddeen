@@ -56,15 +56,14 @@ updatedb  # Update the database first!
 locate exploit.py
 ```
 ### 📝 Text Manipulation (The "Awk/Sed" Magic)
+   `cat`/`less`/`head`/`tail`
 ```
 cat file.txt           # Dump entire file.
 less file.txt          # Scroll through file (press q to quit).
 head -n 5 file.txt     # Show first 5 lines.
 tail -f /var/log/syslog # Watch a log file update in real-time.
 ```
-`cat`/`less`/`head`/`tail`
-
-### Reading files.
+### `Reading files`
 ```
 cat file.txt: `Dump entire file.`
 
